@@ -2,10 +2,19 @@ name:  Activity Types and Filters
 
 on:
   push:
-    branches:
+    branches: # using branch filter
       - main
       - 'dev-*'
       - 'feature/**'
+    paths:
+      - 'src/app.jsx'
+  pull_request:
+    types: # using types
+      - opened
+      - edited
+    branches: # using filter
+      - main
+
 
 jobs:
   deploy:
