@@ -1,10 +1,11 @@
 name:  Activity Types and Filters 
 
 on:
-  pull_request:
-    types:
-      - opened
-      - edited
+  push:
+    branches:
+      - main
+      - 'dev-*'
+      - 'feature/**'
 
 jobs:
   deploy:
